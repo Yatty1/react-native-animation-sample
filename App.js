@@ -5,16 +5,15 @@ import {
   View
 } from 'react-native';
 
+import BarIndicator from './js/BarIndicator';
 import TimingAnimation from './js/TimingAnimation';
-import SpringAnimation from './js/SpringAnimation';
-import SequenceSample from './js/SequenceSample';
-import StaggerSample from './js/StaggerSample';
-import Sample from './js/Sample';
 
 export default class App extends React.Component {
   render() {
     return (
-      <Sample/>
+      <View style={styles.container}>
+        <BarIndicator/>
+      </View>
     );
   }
 }
