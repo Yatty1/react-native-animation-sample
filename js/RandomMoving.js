@@ -10,10 +10,14 @@ import {
 
 const { UIManager } = NativeModules;
 
-// to work on Android
+// to get this to work on Android
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
+//layout animation options
+//linear
+//easeInOut
+//spring
 export default class RandomMoving extends React.Component {
   constructor() {
     super();
@@ -52,6 +56,7 @@ export default class RandomMoving extends React.Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
