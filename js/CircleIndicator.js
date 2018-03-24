@@ -13,6 +13,9 @@ export default class CircleIndicator extends React.Component {
     this.animatedValues = this.arr.map(() => {
       return new Animated.Value(0);
     })
+    this.calcTranslate();
+  }
+  calcTranslate() {
     let frame = 80, radius = 100;
     /// translateX
     var inputRange = [], outputRange = [];
