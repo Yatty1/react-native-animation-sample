@@ -15,6 +15,11 @@ export default class CircleIndicator extends React.Component {
     })
     this.calcTranslate();
   }
+
+  componentDidMount() {
+    this.animate();
+  }
+
   calcTranslate() {
     let frame = 80, radius = 100;
     /// translateX
@@ -41,13 +46,10 @@ export default class CircleIndicator extends React.Component {
     })
   }
 
-  componentDidMount() {
-    this.animate();
-  }
-
   animate() {
     const animations = this.arr.map((value) => {
       return Animated.timing(this.animatedValues[value], {
+        delay: 300,
         toValue: 1,
         duration: 2000,
         easing: Easing.easeInOut
