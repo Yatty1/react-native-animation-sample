@@ -7,21 +7,9 @@ import {
 
 import BarIndicator from './js/BarIndicator';
 import TimingAnimation from './js/TimingAnimation';
-
+import RandomMoving from './js/RandomMoving';
 export default class App extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <BarIndicator/>
-      </View>
-    );
+    return <RandomMoving/>;
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
-});

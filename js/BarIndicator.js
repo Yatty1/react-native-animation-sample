@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   View,
+  StyleSheet,
   Animated,
   Easing
 } from 'react-native';
@@ -29,14 +30,24 @@ export default class BarIndicator extends React.Component {
       outputRange: [-100, 100, -100]
     })
     return (
-      <Animated.View
-        style={{
-          height: 5,
-          width: 50,
-          borderRadius: 2,
-          backgroundColor: '#1c798a',
-          marginLeft
-        }}/>
+      <View style={styles.container}>
+        <Animated.View
+          style={{
+            height: 5,
+            width: 50,
+            borderRadius: 2,
+            backgroundColor: '#1c798a',
+            marginLeft
+          }}/>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
