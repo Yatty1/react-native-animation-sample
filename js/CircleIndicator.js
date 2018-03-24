@@ -50,7 +50,12 @@ export default class CircleIndicator extends React.Component {
         easing: Easing.easeInOut
       })
     });
-    Animated.stagger(100, animations).start();
+    Animated.stagger(100, animations).start(() => {
+      this.animatedValues.forEach((value) => {
+        value.setValue(0);
+      })
+      this.animate();
+    });
   }
 
   render() {
